@@ -10,9 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisiteVassouras">
         <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.VisiteVassouras.NoActionBar">
+        </activity>
+        <activity
             android:name=".MainActivity"
-            android:label="Visite Vassouras"
-            android:exported="true">
+            android:exported="true"
+            android:label="Visite Vassouras">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
