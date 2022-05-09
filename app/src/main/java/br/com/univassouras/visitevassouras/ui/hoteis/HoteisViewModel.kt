@@ -1,13 +1,12 @@
-package br.com.univassouras.visitevassouras.ui.atracoes
+package br.com.univassouras.visitevassouras.ui.hoteis
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class AtracoesViewModel : ViewModel() {
-
+class HoteisViewModel : ViewModel() {
     private val _text = MutableLiveData<String>().apply {
-        value = "This is attraction Fragment"
+        value = "This is hotel Fragment"
     }
     val text: LiveData<String> = _text
 }

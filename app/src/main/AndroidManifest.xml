@@ -10,21 +10,26 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisiteVassouras">
         <activity
-            android:name=".HomeActivity"
-            android:exported="true"
-            android:label="@string/title_activity_home"
-            android:theme="@style/Theme.VisiteVassouras.NoActionBar">
-        </activity>
-        <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Visite Vassouras">
+            android:label="Visite Vassouras"
+            android:theme="@style/Theme.VisiteVassouras.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true"
+            android:label="@string/title_activity_home"
+            android:theme="@style/Theme.VisiteVassouras.NoActionBar">
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -22,4 +22,34 @@
         android:name="br.com.univassouras.visitevassouras.ui.restaurantes.RestaurantesFragment"
         android:label="@string/menu_restaurantes"
         tools:layout="@layout/fragment_restaurantes" />
+
+    <fragment
+        android:id="@+id/nav_hospedagens"
+        android:name="br.com.univassouras.visitevassouras.ui.hoteis.HoteisFragment"
+        android:label="@string/menu_hospedagens"
+        tools:layout="@layout/fragment_hoteis" />
+
+    <fragment
+        android:id="@+id/nav_eventos"
+        android:name="br.com.univassouras.visitevassouras.ui.eventos.EventosFragment"
+        android:label="@string/menu_eventos"
+        tools:layout="@layout/fragment_eventos" />
+
+    <fragment
+        android:id="@+id/nav_sobre_vassouras"
+        android:name="br.com.univassouras.visitevassouras.ui.sobre.SobreVassourasFragment"
+        android:label="@string/menu_sobre_vassouras"
+        tools:layout="@layout/fragment_sobre_vassouras" />
+
+    <fragment
+        android:id="@+id/nav_ler_qrcode"
+        android:name="br.com.univassouras.visitevassouras.ui.qrcode.LerQrCodeFragment"
+        android:label="@string/menu_ler_qrcode"
+        tools:layout="@layout/fragment_ler_qr_code" />
+
+    <fragment
+        android:id="@+id/nav_contato"
+        android:name="br.com.univassouras.visitevassouras.ui.contato.ContatoFragment"
+        android:label="@string/menu_contato"
+        tools:layout="@layout/fragment_contato" />
 </navigation>

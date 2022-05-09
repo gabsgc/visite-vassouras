@@ -1,4 +1,4 @@
-package br.com.univassouras.visitevassouras.ui.restaurantes
+package br.com.univassouras.visitevassouras.ui.eventos
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import br.com.univassouras.visitevassouras.databinding.FragmentRestaurantesBinding
+import br.com.univassouras.visitevassouras.databinding.FragmentEventosBinding
 
-class RestaurantesFragment : Fragment() {
+class EventosFragment : Fragment() {
 
-    private var _binding: FragmentRestaurantesBinding? = null
-
+    private var _binding: FragmentEventosBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -20,16 +19,16 @@ class RestaurantesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
-            ViewModelProvider(this).get(RestaurantesViewModel::class.java)
+        val eventoViewModel = ViewModelProvider(this).get(EventosViewModel::class.java)
 
-        _binding = FragmentRestaurantesBinding.inflate(inflater, container, false)
+        _binding = FragmentEventosBinding.inflate(inflater, container,false)
         val root: View = binding.root
 
-        val textView: TextView = binding.textRestaurante
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
+        val textView: TextView = binding.tvEvento
+        eventoViewModel.text.observe(viewLifecycleOwner) {
             textView.text = it
         }
+
         return root
     }
 
@@ -37,4 +36,5 @@ class RestaurantesFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 }

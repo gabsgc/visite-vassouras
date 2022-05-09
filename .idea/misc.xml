@@ -3,7 +3,32 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/activity_main.xml" value="0.1490036231884058" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/drawable/ic_menu_calendar.xml" value="0.1875" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1875" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1875" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/drawable/ic_menu_headset_mic.xml" value="0.1875" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/drawable/ic_menu_home.xml" value="0.1875" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/drawable/side_nav_bar.xml" value="0.1875" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/activity_home.xml" value="0.25" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/app_bar_home.xml" value="0.15806159420289856" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/content_home.xml" value="0.1" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_atracao.xml" value="0.1" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_atracoes.xml" value="0.15806159420289856" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_contato.xml" value="0.1" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_evento.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_eventos.xml" value="0.1" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_hotel.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_ler_qr_code.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_restaurantes.xml" value="0.1" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/fragment_sobre_vassouras.xml" value="0.17481884057971014" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/hotel_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/nav_footer.xml" value="0.33" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/nav_header_home.xml" value="0.15806159420289856" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/layout/restaurantes_slideshow.xml" value="0.15806159420289856" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/menu/activity_main_drawer.xml" value="0.25" />
+        <entry key="..\:/Users/gabri/AndroidStudioProjects/VisiteVassouras/app/src/main/res/menu/home.xml" value="0.18802083333333333" />
       </map>
     </option>
   </component>
