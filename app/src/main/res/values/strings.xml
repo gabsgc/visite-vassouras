@@ -24,4 +24,8 @@
     <string name="this_is_contact_fragment">This is contact fragment</string>
     <string name="this_is_qrcode_fragment">This is QrCode fragment</string>
     <string name="this_is_about_vassouras_fragment">This is about Vassouras fragment</string>
+    <string name="conheca_vassouras_btn">CONHEÇA VASSOURAS</string>
+    <string name="boas_vindas">Bem-vindo a Vassouras</string>
+    <string name="titulo_atracoes_home">Encontre lugares para visitar</string>
+    <string name="titulo_eventos_home">Confira os próximos eventos</string>
 </resources>

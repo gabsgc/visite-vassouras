@@ -10,43 +10,12 @@
         android:id="@+id/ivLogoPrefeitura"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="@string/logo_prefeitura_de_vassouras"
         android:src="@drawable/logo_prefeitura"
-        app:layout_constraintBottom_toTopOf="@+id/tv_visitevassouras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        android:contentDescription="@string/logo_prefeitura_de_vassouras" />
-
-    <TextView
-        android:id="@+id/tv_visitevassouras"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/visite_vassouras"
-        android:textColor="@color/black"
-        android:textSize="32sp"
-        app:layout_constraintBottom_toTopOf="@+id/btnComecar"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivLogoPrefeitura" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnComecar"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginBottom="32dp"
-        android:fontFamily="@font/roboto_medium"
-        android:text="@string/comecar"
-        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_visitevassouras" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
