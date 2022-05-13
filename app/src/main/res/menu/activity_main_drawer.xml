@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_atracoes"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_atracoes" />
+        <item
+            android:id="@+id/nav_restaurantes"
+            android:icon="@drawable/ic_menu_restaurant"
+            android:title="@string/menu_restaurantes" />
+        <item
+            android:id="@+id/nav_hospedagens"
+            android:icon="@drawable/ic_menu_hotel"
+            android:title="@string/menu_hospedagens" />
+        <item
+            android:id="@+id/nav_eventos"
+            android:icon="@drawable/ic_menu_calendar"
+            android:title="@string/menu_eventos" />
+        <item
+            android:id="@+id/nav_sobre_vassouras"
+            android:icon="@drawable/ic_menu_info"
+            android:title="@string/menu_sobre_vassouras" />
+        <item
+            android:id="@+id/nav_ler_qrcode"
+            android:icon="@drawable/ic_menu_qr_code_scanner"
+            android:title="@string/menu_ler_qrcode" />
+        <item
+            android:id="@+id/nav_contato"
+            android:icon="@drawable/ic_menu_headset_mic"
+            android:title="@string/menu_contato" />
+    </group>
+</menu>

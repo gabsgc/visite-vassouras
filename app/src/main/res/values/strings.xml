@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">VisiteVassouras</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Secretaria de Desenvolvimento Econômico e Turismo</string>
+    <string name="nav_header_subtitle">SEDET</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Configurações</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_atracoes">Atrativos Turísticos</string>
+    <string name="menu_restaurantes">Restaurantes</string>
+    <string name="menu_hospedagens">Hóteis e Pousadas</string>
+    <string name="menu_eventos">Eventos</string>
+    <string name="menu_sobre_vassouras">Sobre Vassouras</string>
+    <string name="menu_ler_qrcode">Ler QrCode</string>
+    <string name="menu_contato">Entre em Contato</string>
+    <string name="visite_vassouras">VISITE VASSOURAS</string>
+    <string name="comecar">COMEÇAR</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logo_prefeitura_de_vassouras">Logo Prefeitura de Vassouras</string>
+    <string name="this_is_contact_fragment">This is contact fragment</string>
+    <string name="this_is_qrcode_fragment">This is QrCode fragment</string>
+    <string name="this_is_about_vassouras_fragment">This is about Vassouras fragment</string>
 </resources>
