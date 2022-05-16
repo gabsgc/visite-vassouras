@@ -31,30 +31,40 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/ivCardSobreVassouras"
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mcSobreVassouras"
             android:layout_width="match_parent"
             android:layout_height="194dp"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="16dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/banner_vassouras"
+            app:cardCornerRadius="20dp"
+            app:strokeWidth="1dp"
+            app:strokeColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/text_home" />
+            app:layout_constraintTop_toBottomOf="@+id/text_home">
+            <ImageView
+                android:id="@+id/ivSobreVassouras"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/banner_vassouras" />
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/mbConhecaVassouras"
             style="style/botaoConhecaVassouras"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/conheca_vassouras_btn"
-            app:layout_constraintBottom_toBottomOf="@+id/ivCardSobreVassouras"
+            app:layout_constraintBottom_toBottomOf="@+id/mcSobreVassouras"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ivCardSobreVassouras" />
+            app:layout_constraintTop_toBottomOf="@+id/mcSobreVassouras" />
 
         <TextView
             android:id="@+id/tvTituloAtracoesHome"
