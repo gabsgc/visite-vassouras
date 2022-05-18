@@ -21,7 +21,6 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logo_prefeitura_de_vassouras">Logo Prefeitura de Vassouras</string>
-    <string name="this_is_qrcode_fragment">This is QrCode fragment</string>
     <string name="this_is_about_vassouras_fragment">This is about Vassouras fragment</string>
     <string name="titulo_contato">Fale com a gente</string>
     <string name="descricao_responsavel">Secretaria de Desenvolvimento Econômico e Turismo SEDET</string>
@@ -32,4 +31,7 @@
     <string name="horario_sedet1">Sábado Fechado</string>
     <string name="facebook">\@stedvassouras</string>
     <string name="instagram">\@visitevassouras</string>
+    <string name="titulo_scan_qr_code">Scan Qr Code</string>
+    <string name="descricao_scan_qr_code">Encontrou um QrCode?! Clique no botão abaixo e descubra curiosidades sobre a história dessa atração.</string>
+    <string name="ler_qr_code">LER QR CODE</string>
 </resources>
