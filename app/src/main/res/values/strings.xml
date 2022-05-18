@@ -34,4 +34,5 @@
     <string name="titulo_scan_qr_code">Scan Qr Code</string>
     <string name="descricao_scan_qr_code">Encontrou um QrCode?! Clique no botão abaixo e descubra curiosidades sobre a história dessa atração.</string>
     <string name="ler_qr_code">LER QR CODE</string>
+    <string name="aponte_para_o_qrcode">Aponte para o QrCode...</string>
 </resources>
