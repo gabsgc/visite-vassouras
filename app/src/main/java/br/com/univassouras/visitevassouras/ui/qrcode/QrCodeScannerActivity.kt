@@ -1,11 +1,18 @@
 package br.com.univassouras.visitevassouras.ui.qrcode
 
+import android.content.Intent
 import android.content.pm.PackageManager
-import androidx.appcompat.app.AppCompatActivity
+import android.graphics.Color
+import android.net.Uri
 import android.os.Bundle
+import android.util.Patterns
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import androidx.core.net.toUri
+import androidx.core.text.HtmlCompat
 import br.com.univassouras.visitevassouras.databinding.ActivityQrCodeScannerBinding
 import com.budiyev.android.codescanner.*
 
@@ -16,14 +23,22 @@ class QrCodeScannerActivity : AppCompatActivity() {
     private val binding by lazy { ActivityQrCodeScannerBinding.inflate(layoutInflater) }
     private val scannerView by lazy { binding.scannerView }
     private val codeScanner by lazy { CodeScanner(this, scannerView) }
+    private var url = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
-        title = "Leitor de Qr Code"
+        title = "Ler Qr Code"
 
         setupPermissions()
         openCodeScanner()
+
+        binding.tvLinkQrCodeScannerResult.setOnClickListener {
+            val uri = url.toUri()
+            val openURL = Intent(Intent.ACTION_VIEW)
+            openURL.data = Uri.parse(uri.toString())
+            startActivity(openURL)
+        }
     }
 
     private fun openCodeScanner() {
@@ -37,7 +52,16 @@ class QrCodeScannerActivity : AppCompatActivity() {
 
             decodeCallback = DecodeCallback {
                 runOnUiThread {
-                    binding.tvQrCodeScannerResult.text = it.text
+                    url = it.text
+                    if (url.isValidUrl()) {
+                        binding.tvLinkQrCodeScannerResult.text = url
+                        binding.tvLinkQrCodeScannerResult.setTextColor(Color.BLUE)
+                        binding.tvLinkQrCodeScannerResult.text = HtmlCompat.fromHtml("<u>$url</u>", HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    } else {
+                        binding.tvLinkQrCodeScannerResult.visibility = View.INVISIBLE
+                        binding.tvQrCodeScannerResult.text = url
+                        binding.tvQrCodeScannerResult.visibility = View.VISIBLE
+                    }
                 }
             }
 
@@ -45,7 +69,7 @@ class QrCodeScannerActivity : AppCompatActivity() {
                 runOnUiThread {
                     Toast.makeText(
                         this@QrCodeScannerActivity,
-                        "Camera initialization error: ${it.message}",
+                        "Erro ao iniciar câmera: ${it.message}",
                         Toast.LENGTH_LONG
                     ).show()
                 }
@@ -66,6 +90,8 @@ class QrCodeScannerActivity : AppCompatActivity() {
         codeScanner.releaseResources()
         super.onPause()
     }
+
+    private fun String.isValidUrl(): Boolean = Patterns.WEB_URL.matcher(this).matches()
 
     private fun setupPermissions() {
         val permission = ContextCompat.checkSelfPermission(this, android.Manifest.permission.CAMERA)
