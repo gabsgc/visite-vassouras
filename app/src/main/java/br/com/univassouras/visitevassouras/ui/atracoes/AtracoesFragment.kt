@@ -4,37 +4,46 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import br.com.univassouras.visitevassouras.databinding.FragmentAtracoesBinding
+import br.com.univassouras.visitevassouras.retrofit.RetrofitInstance
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class AtracoesFragment : Fragment() {
-
-    private var _binding: FragmentAtracoesBinding? = null
-
-    private val binding get() = _binding!!
+    private var binding: FragmentAtracoesBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val atracaoViewModel =
-            ViewModelProvider(this).get(AtracoesViewModel::class.java)
+        binding = FragmentAtracoesBinding.inflate(inflater, container, false)
+        val root: View = binding!!.root
 
-        _binding = FragmentAtracoesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding?.rvAtracoes?.layoutManager = GridLayoutManager(context, 2)
 
-        val textView: TextView = binding.textAtracoes
-        atracaoViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        GlobalScope.launch {
+            val getAtracoes = RetrofitInstance.service.getAtracoes()
+            withContext(context = Dispatchers.Main) {
+                val atracoesAdapter : AtracoesAdapter =
+                    getAtracoes.body()?.let { AtracoesAdapter(it) }!!
+                withContext(Dispatchers.Main) {
+                    binding!!.rvAtracoes.adapter = atracoesAdapter
+                    binding!!.rvAtracoes.layoutManager = GridLayoutManager(context, 2)
+                }
+            }
         }
         return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
+
+    fun onItemClick(){}
 }
