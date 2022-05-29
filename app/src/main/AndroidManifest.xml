@@ -3,6 +3,7 @@
     package="br.com.univassouras.visitevassouras">
 
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -15,6 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.VisiteVassouras">
+        <activity
+            android:name=".ui.atracoes.DetalhesAtracaoActivity"
+            android:exported="false" />
         <activity
             android:name=".ui.qrcode.QrCodeScannerActivity"
             android:exported="false" />

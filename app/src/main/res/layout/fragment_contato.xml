@@ -59,7 +59,7 @@
 
     <TextView
         android:id="@+id/tvEndereco"
-        style="@style/descricoesContato"
+        style="@style/descricoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/endereco_sedet"
@@ -88,7 +88,7 @@
 
     <TextView
         android:id="@+id/tvHorarioFuncionamento"
-        style="@style/descricoesContato"
+        style="@style/descricoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/horario_sedet"
@@ -99,7 +99,7 @@
 
     <TextView
         android:id="@+id/tvHorarioFuncionamento2"
-        style="@style/descricoesContato"
+        style="@style/descricoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/horario_sedet1"
