@@ -29,6 +29,7 @@ class QrCodeScannerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         title = "Ler Qr Code"
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         setupPermissions()
         openCodeScanner()
@@ -39,6 +40,11 @@ class QrCodeScannerActivity : AppCompatActivity() {
             openURL.data = Uri.parse(uri.toString())
             startActivity(openURL)
         }
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        finish()
+        return true
     }
 
     private fun openCodeScanner() {

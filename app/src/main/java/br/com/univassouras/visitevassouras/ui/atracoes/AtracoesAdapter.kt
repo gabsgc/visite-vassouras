@@ -46,6 +46,7 @@ class AtracoesAdapter(
             this.atracao = atracao
             binding.tvTituloAtracaoItem.text = atracao.nome
             Picasso.get().load(atracao.imagemPrincipal).into(binding.ivAtracao)
+            binding.ivAtracao.contentDescription = atracao.nome
 
             itemView.setOnClickListener {
                 val intent = Intent(context, DetalhesAtracaoActivity::class.java)
