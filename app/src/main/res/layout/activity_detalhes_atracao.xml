@@ -128,14 +128,33 @@
         <TextView
             android:id="@+id/tvSobreAtracao"
             style="@style/descricoes"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginEnd="16dp"
+            android:singleLine="false"
+            android:scrollHorizontally="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTituloSobreAtracao"
             tools:text="Composição que mais chama a atenção no centro histórico vassourense, a Praça Barão de Campo Belo é o nosso xodó. Conhecida também como 'Jardim', a praça é um dos principais atrativos turísticos de Vassouras. Em 2018 ela ganhou essa iluminação especial. Ficou mais charmosa e deu mais segurança para os moradores, turistas e visitantes. É ou não é a Praça mais linda do mundo?" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mbQueroVisitarAtracao"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/quero_visitar"
+            android:textSize="16sp"
+            app:cornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvSobreAtracao"
+            app:layout_constraintVertical_bias="0.0"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

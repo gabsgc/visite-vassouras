@@ -1,5 +1,6 @@
 package br.com.univassouras.visitevassouras.ui.atracoes
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -15,6 +16,7 @@ import kotlinx.coroutines.withContext
 
 class AtracoesFragment : Fragment() {
     private var binding: FragmentAtracoesBinding? = null
+    private val adapter by lazy { context?.let { AtracoesAdapter(context = it, atracoes = emptyList()) } }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,25 +27,34 @@ class AtracoesFragment : Fragment() {
         val root: View = binding!!.root
 
         binding?.rvAtracoes?.layoutManager = GridLayoutManager(context, 2)
+        binding?.loader?.visibility = View.VISIBLE
 
+        getAtracoes()
+
+        return root
+    }
+
+    private fun getAtracoes() {
         GlobalScope.launch {
             val getAtracoes = RetrofitInstance.service.getAtracoes()
             withContext(context = Dispatchers.Main) {
-                val atracoesAdapter : AtracoesAdapter =
-                    getAtracoes.body()?.let { AtracoesAdapter(it) }!!
+                binding?.loader?.visibility = View.INVISIBLE
+                val atracoes =  getAtracoes.body()!!
                 withContext(Dispatchers.Main) {
-                    binding!!.rvAtracoes.adapter = atracoesAdapter
+                    binding!!.rvAtracoes.adapter = context?.let { AtracoesAdapter(it, atracoes = atracoes) }
                     binding!!.rvAtracoes.layoutManager = GridLayoutManager(context, 2)
+                    adapter?.onItemClicked  = {
+                        val intent = Intent(context, DetalhesAtracaoActivity::class.java)
+                        intent.putExtra(CHAVE_ATRACAO, it)
+                        startActivity(intent)
+                    }
                 }
             }
         }
-        return root
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null
     }
-
-    fun onItemClick(){}
 }
