@@ -39,4 +39,10 @@
     <string name="quero_visitar">QUERO VISITAR</string>
     <string name="acessar_site">ACESSAR SITE</string>
     <string name="saiba_mais">SAIBA MAIS</string>
+    <string name="local">Local</string>
+    <string name="data">Data(s)</string>
+    <string name="horario_evento">Horário</string>
+    <string name="ingresso">Ingresso</string>
+    <string name="comprar_ingresso">COMPRAR INGRESSO</string>
+    <string name="mb_garantir_ingresso">GARANTIR INGRESSO</string>
 </resources>

@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/itemEventosList"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/layout_border"
+    app:cardElevation="1dp">
+
+    <TextView
+        android:id="@+id/tvTituloEvento"
+        style="@style/tvTituloEvento"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        tools:text="Evento Teste" />
+
+    <TextView
+        android:id="@+id/tvTituloData"
+        style="@style/TitulosDetalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/data"
+        app:drawableLeftCompat="@drawable/ic_menu_calendar"
+        app:drawableTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTituloHorarioEvento"
+        app:layout_constraintEnd_toStartOf="@+id/tvDataInicioEvento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloEvento"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvDataInicioEvento"
+        style="@style/descricoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloData"
+        tools:text="12/04/2022" />
+
+    <TextView
+        android:id="@+id/tvSeparatorData"
+        style="@style/descricoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toEndOf="@+id/tvDataInicioEvento"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloData"
+        android:text="-" />
+
+    <TextView
+        android:id="@+id/tvDataTerminoEvento"
+        style="@style/descricoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tvSeparatorData"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloData"
+        tools:text="12/04/2022" />
+
+    <TextView
+        android:id="@+id/tvTituloHorarioEvento"
+        style="@style/TitulosDetalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/horario_evento"
+        app:drawableLeftCompat="@drawable/ic_contact_time"
+        app:drawableTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTituloIngressoEvento"
+        app:layout_constraintEnd_toStartOf="@+id/tvHorarioEvento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDataInicioEvento"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvHorarioEvento"
+        style="@style/descricoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloHorarioEvento"
+        tools:text="18:00 - 21:00" />
+
+    <TextView
+        android:id="@+id/tvTituloIngressoEvento"
+        style="@style/TitulosDetalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/ingresso"
+        app:drawableLeftCompat="@drawable/ic_evento_note"
+        app:drawableTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/tvTituloLocal"
+        app:layout_constraintEnd_toStartOf="@+id/tvIngressoEvento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHorarioEvento"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tvIngressoEvento"
+        style="@style/descricoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloIngressoEvento"
+        tools:text="Gratuito" />
+
+    <TextView
+        android:id="@+id/tvTituloLocal"
+        style="@style/TitulosDetalhes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/local"
+        app:drawableLeftCompat="@drawable/ic_contact_location"
+        app:drawableTint="@color/black"
+        app:layout_constraintEnd_toStartOf="@+id/tvLocalEvento"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvIngressoEvento" />
+
+    <TextView
+        android:id="@+id/tvLocalEvento"
+        style="@style/descricoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/mbComprarIngressoEvento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloLocal"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="Praça Barão de Campo Belo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mbComprarIngressoEvento"
+        style="@style/mbAcessarSite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/comprar_ingresso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Circle" />
+</androidx.constraintlayout.widget.ConstraintLayout>
