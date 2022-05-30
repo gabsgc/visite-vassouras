@@ -11,7 +11,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_atracoes">Atrativos Turísticos</string>
     <string name="menu_restaurantes">Restaurantes</string>
-    <string name="menu_hospedagens">Hóteis e Pousadas</string>
+    <string name="menu_hospedagens">Hospedagens</string>
     <string name="menu_eventos">Eventos</string>
     <string name="menu_sobre_vassouras">Sobre Vassouras</string>
     <string name="menu_ler_qrcode">Ler QrCode</string>
@@ -38,4 +38,5 @@
     <string name="sobre">Sobre</string>
     <string name="quero_visitar">QUERO VISITAR</string>
     <string name="acessar_site">ACESSAR SITE</string>
+    <string name="saiba_mais">SAIBA MAIS</string>
 </resources>
