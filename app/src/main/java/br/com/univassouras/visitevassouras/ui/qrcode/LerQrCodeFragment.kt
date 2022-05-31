@@ -1,5 +1,6 @@
 package br.com.univassouras.visitevassouras.ui.qrcode
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -19,6 +20,13 @@ class LerQrCodeFragment : Fragment() {
 
         _binding = FragmentLerQrCodeBinding.inflate(inflater, container,false)
         val root: View = binding.root
+
+        val mbLerQrCode = binding.mbScanQrCode
+
+        mbLerQrCode.setOnClickListener {
+            val intent = Intent(context, QrCodeScannerActivity::class.java)
+            startActivity(intent)
+        }
 
         return root
     }

@@ -4,38 +4,51 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.univassouras.visitevassouras.databinding.FragmentHoteisBinding
+import br.com.univassouras.visitevassouras.retrofit.RetrofitInstance
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class HoteisFragment : Fragment() {
-
-    private var _binding: FragmentHoteisBinding? = null
-
-    private val binding get() = _binding!!
+    private var binding: FragmentHoteisBinding? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val hotelViewModel =
-            ViewModelProvider(this).get(HoteisViewModel::class.java)
+        binding = FragmentHoteisBinding.inflate(inflater, container, false)
+        val root: View = binding!!.root
 
-        _binding = FragmentHoteisBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding?.rvHoteis?.layoutManager = LinearLayoutManager(context)
+        binding?.loader?.visibility = View.VISIBLE
 
-        val textView: TextView = binding.tvHotel
-        hotelViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
+        getHoteis()
+
         return root
+    }
+
+    private fun getHoteis() {
+        GlobalScope.launch {
+            val getHoteis = RetrofitInstance.service.getHoteis()
+            withContext(Dispatchers.Main) {
+                binding?.loader?.visibility = View.INVISIBLE
+                val hoteis = getHoteis.body()!!
+                withContext(Dispatchers.Main) {
+                    binding?.rvHoteis?.adapter = context?.let { HoteisAdapter(it, hoteis) }
+                    binding?.rvHoteis?.layoutManager = LinearLayoutManager(context)
+                }
+            }
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 
 }
