@@ -17,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.VisiteVassouras">
         <activity
+            android:name=".ui.home.ConhecaVassourasActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.atracoes.DetalhesAtracaoActivity"
             android:exported="false" />
         <activity

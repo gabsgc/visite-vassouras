@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
         getEventos()
 
         binding?.mbConhecaVassouras?.setOnClickListener {
-            val intent = Intent(context, StreetViewActivity::class.java)
+            val intent = Intent(context, ConhecaVassourasActivity::class.java)
             startActivity(intent)
         }
 
