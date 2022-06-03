@@ -48,6 +48,33 @@
             tools:text="Praça Barão de Campo Belo" />
 
         <TextView
+            android:id="@+id/tvTituloDiasFuncionamentoAtracao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            style="@style/TitulosDetalhes"
+            android:text="@string/dias_funcionamento"
+            app:drawableLeftCompat="@drawable/ic_menu_calendar"
+            app:drawableTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloAtracao" />
+
+        <TextView
+            android:id="@+id/tvDiasFuncionamentoAtracao"
+            style="@style/descricoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloDiasFuncionamentoAtracao"
+            tools:text="Todos os dias" />
+
+        <TextView
             android:id="@+id/tvTituloHorarioAtracao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -60,7 +87,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvTituloAtracao" />
+            app:layout_constraintTop_toBottomOf="@+id/tvDiasFuncionamentoAtracao" />
 
         <TextView
             android:id="@+id/tvHorarioFuncionamentoAtracao"
@@ -72,7 +99,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTituloHorarioAtracao"
-            tools:text="Aberto todos os dias - Horário 24h" />
+            tools:text="24h" />
 
         <TextView
             android:id="@+id/tvTituloEnderecoAtracao"

@@ -37,6 +37,7 @@ class DetalhesAtracaoActivity : AppCompatActivity() {
         binding.tvHorarioFuncionamentoAtracao.text = atracao.horarioFuncionamento
         binding.tvEnderecoAtracao.text = atracao.endereco
         binding.tvSobreAtracao.text = atracao.descricao
+        binding.tvDiasFuncionamentoAtracao.text = atracao.diasFuncionamento
 
         title = atracao.nome
 

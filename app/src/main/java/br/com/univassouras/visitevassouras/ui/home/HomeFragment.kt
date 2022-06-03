@@ -1,42 +1,85 @@
 package br.com.univassouras.visitevassouras.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
 import br.com.univassouras.visitevassouras.databinding.FragmentHomeBinding
+import br.com.univassouras.visitevassouras.retrofit.RetrofitInstance
+import br.com.univassouras.visitevassouras.ui.atracoes.AtracoesAdapter
+import br.com.univassouras.visitevassouras.ui.atracoes.CHAVE_ATRACAO
+import br.com.univassouras.visitevassouras.ui.atracoes.DetalhesAtracaoActivity
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class HomeFragment : Fragment() {
-
-    private var _binding: FragmentHomeBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private var binding: FragmentHomeBinding? = null
+    private val adapter by lazy { context?.let { HomeAtracoesAdapter(context = it, atracoes = emptyList()) } }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val homeViewModel =
-            ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val root: View = binding.root
+        binding = FragmentHomeBinding.inflate(inflater, container, false)
+        val root: View = binding!!.root
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
+        binding?.rvAtracoesHome?.layoutManager = LinearLayoutManager(context)
+        binding?.rvEventosHome?.layoutManager = LinearLayoutManager(context)
+        binding?.loader?.visibility = View.VISIBLE
+        binding?.loaderEventos?.visibility = View.VISIBLE
+        getAtracoes()
+        getEventos()
+
+        binding?.mbConhecaVassouras?.setOnClickListener {
+            val intent = Intent(context, ConhecaVassourasActivity::class.java)
+            startActivity(intent)
         }
+
         return root
+    }
+
+    private fun getAtracoes() {
+        GlobalScope.launch {
+            val getAtracoes = RetrofitInstance.service.getAtracoes()
+            withContext(context = Dispatchers.Main) {
+                binding?.loader?.visibility = View.INVISIBLE
+                val atracoes =  getAtracoes.body()!!
+                withContext(Dispatchers.Main) {
+                    binding!!.rvAtracoesHome.adapter = context?.let { AtracoesAdapter(it, atracoes = atracoes) }
+                    binding!!.rvAtracoesHome.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+                    adapter?.onItemClicked  = {
+                        val intent = Intent(context, DetalhesAtracaoActivity::class.java)
+                        intent.putExtra(CHAVE_ATRACAO, it)
+                        startActivity(intent)
+                    }
+                }
+            }
+        }
+    }
+
+    private fun getEventos() {
+        GlobalScope.launch {
+            val getEventos = RetrofitInstance.service.getEventos()
+            withContext(Dispatchers.Main) {
+                binding?.loaderEventos?.visibility = View.INVISIBLE
+                val eventos = getEventos.body()!!
+                withContext(Dispatchers.Main){
+                    binding?.rvEventosHome?.adapter = context?.let { HomeEventosAdapter (it, eventos) }
+                    binding?.rvEventosHome?.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+                }
+            }
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null
+        binding = null
     }
 }

@@ -22,6 +22,10 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logo_prefeitura_de_vassouras">Logo Prefeitura de Vassouras</string>
     <string name="this_is_about_vassouras_fragment">This is about Vassouras fragment</string>
+    <string name="conheca_vassouras_btn">CONHEÇA VASSOURAS</string>
+    <string name="boas_vindas">Bem-vindo a Vassouras</string>
+    <string name="titulo_atracoes_home">Encontre lugares para visitar</string>
+    <string name="titulo_eventos_home">Confira a nossa agenda</string>
     <string name="titulo_contato">Fale com a gente</string>
     <string name="descricao_responsavel">Secretaria de Desenvolvimento Econômico e Turismo SEDET</string>
     <string name="endereco">Endereço</string>
@@ -51,4 +55,5 @@
     <string name="sobre_turistica">Detentora de um rico patrimônio cultural material e imaterial composto por suntuosas fazendas históricas remanescentes dos tempos áureos do café, por um conjunto paisagístico e urbanístico tombado pelo IPHAN formado por um casario de época com belíssimas construções, entre casarões, sobrados e palacetes, pelo Jongo, pela Capoeira, pela Caninha Verde, pelo Calango e pelas Folias de Reis.</string>
     <string name="cidade_universitaria">Universitária</string>
     <string name="sobre_universitaria">Há mais de 50 anos, a cidade gira em torno da Universidade de Vassouras. Isso garante uma série de serviços aos estudantes. Todas as instalações da Universidade. A Fundação Educacional Severino Sombra mantenedora da Universidade  forma e e especializa profissionais nas mais diversas áreas do conhecimento, baseada na tríade ensino, pesquisa e extensão.</string>
+    <string name="dias_funcionamento">Dias de funcionamento</string>
 </resources>
