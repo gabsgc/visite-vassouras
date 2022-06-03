@@ -78,6 +78,19 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/mbConhecaVassouras" />
 
+        <ProgressBar
+            android:id="@+id/loader"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toTopOf="@id/tvTituloEventosHome"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTituloAtracoesHome"
+            app:layout_constraintVertical_bias="0.0" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvAtracoesHome"
             android:layout_width="match_parent"
@@ -92,15 +105,26 @@
 
         <TextView
             android:id="@+id/tvTituloEventosHome"
+            style="@style/titulosHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            style="@style/titulosHome"
             android:text="@string/titulo_eventos_home"
             android:textAppearance="?attr/textAppearanceHeadline5"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/rvAtracoesHome" />
+
+        <ProgressBar
+            android:id="@+id/loaderEventos"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginTop="32dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTituloEventosHome" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvEventosHome"

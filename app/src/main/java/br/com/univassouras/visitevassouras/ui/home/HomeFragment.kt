@@ -32,7 +32,8 @@ class HomeFragment : Fragment() {
 
         binding?.rvAtracoesHome?.layoutManager = LinearLayoutManager(context)
         binding?.rvEventosHome?.layoutManager = LinearLayoutManager(context)
-
+        binding?.loader?.visibility = View.VISIBLE
+        binding?.loaderEventos?.visibility = View.VISIBLE
         getAtracoes()
         getEventos()
 
@@ -48,6 +49,7 @@ class HomeFragment : Fragment() {
         GlobalScope.launch {
             val getAtracoes = RetrofitInstance.service.getAtracoes()
             withContext(context = Dispatchers.Main) {
+                binding?.loader?.visibility = View.INVISIBLE
                 val atracoes =  getAtracoes.body()!!
                 withContext(Dispatchers.Main) {
                     binding!!.rvAtracoesHome.adapter = context?.let { AtracoesAdapter(it, atracoes = atracoes) }
@@ -66,6 +68,7 @@ class HomeFragment : Fragment() {
         GlobalScope.launch {
             val getEventos = RetrofitInstance.service.getEventos()
             withContext(Dispatchers.Main) {
+                binding?.loaderEventos?.visibility = View.INVISIBLE
                 val eventos = getEventos.body()!!
                 withContext(Dispatchers.Main){
                     binding?.rvEventosHome?.adapter = context?.let { HomeEventosAdapter (it, eventos) }
