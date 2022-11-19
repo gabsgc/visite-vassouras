@@ -10,5 +10,6 @@ data class EventoResponse(
     var horario: String?,
     var valor: String?,
     var local: String?,
-    var linkIngresso: String?
+    var linkIngresso: String?,
+    var ativo: Boolean?
 ) : Serializable

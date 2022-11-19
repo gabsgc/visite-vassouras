@@ -8,11 +8,12 @@ import java.io.Serializable
 data class AtracaoResponse(
     var id: Int,
     var nome: String?,
-    var imagemPrincipal: String?,
+    var imgPrincipal: String?,
     var horarioFuncionamento: String?,
     var diasFuncionamento: String?,
     var endereco: String?,
     var descricao: String?,
-    var imagemSecundaria: String?,
-    var rota: String?
+    var imgSecundaria: String?,
+    var rota: String?,
+    var ativo: Boolean?
 ) : Parcelable

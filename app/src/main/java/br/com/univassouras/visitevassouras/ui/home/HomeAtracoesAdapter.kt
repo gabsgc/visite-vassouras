@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
+import br.com.univassouras.visitevassouras.R
 import br.com.univassouras.visitevassouras.databinding.ItemAtracoesListHomeBinding
 import br.com.univassouras.visitevassouras.model.atracao.AtracaoResponse
 import br.com.univassouras.visitevassouras.ui.atracoes.CHAVE_ATRACAO
@@ -46,7 +47,11 @@ class HomeAtracoesAdapter(
         fun bind(atracao: AtracaoResponse) {
             this.atracao = atracao
             binding.tvTituloAtracaoItem.text = atracao.nome
-            Picasso.get().load(atracao.imagemPrincipal).into(binding.ivAtracao)
+            if (atracao.imgPrincipal.isNullOrEmpty()) {
+                Picasso.get().load(R.drawable.placeholder_atrativos).into(binding.ivAtracao)
+            } else {
+                Picasso.get().load(atracao.imgPrincipal).into(binding.ivAtracao)
+            }
             binding.ivAtracao.contentDescription = atracao.nome
 
             itemView.setOnClickListener {

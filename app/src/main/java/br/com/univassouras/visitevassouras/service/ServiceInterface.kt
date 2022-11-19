@@ -8,15 +8,15 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface ServiceInterface {
-    @GET("api/atracoes")
+    @GET("api/v1/atrativos")
     suspend fun getAtracoes() : Response<List<AtracaoResponse>>
 
-    @GET("api/restaurantes")
+    @GET("api/v1/restaurantes")
     suspend fun getRestaurantes() : Response<List<RestauranteResponse>>
 
-    @GET("api/hoteis")
+    @GET("api/v1/hospedagens")
     suspend fun getHoteis() : Response<List<HotelResponse>>
 
-    @GET("api/eventos")
+    @GET("api/v1/eventos")
     suspend fun getEventos() : Response<List<EventoResponse>>
 }

@@ -18,7 +18,7 @@ object RetrofitInstance {
         return serviceInstance!!
     }
 
-    private val BASE_URL = "https://private-a13983-visitevassouras.apiary-mock.com/"
+    private val BASE_URL = "http://ec2-52-21-54-88.compute-1.amazonaws.com:3307/"
     private fun createRetrofit() : Retrofit {
         val logging = HttpLoggingInterceptor()
         logging.level = HttpLoggingInterceptor.Level.BODY

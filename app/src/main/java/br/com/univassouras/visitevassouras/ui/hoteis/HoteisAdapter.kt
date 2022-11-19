@@ -38,7 +38,7 @@ class HoteisAdapter(
             Picasso.get().load(hotel.imagem).into(binding.ivImagemHotel)
             binding.ivImagemHotel.contentDescription = hotel.nome
 
-            val url = hotel.urlSite
+            val url = hotel.url
 
             binding.mbAcessarSiteHotel.setOnClickListener {
                 val uri = url?.toUri()

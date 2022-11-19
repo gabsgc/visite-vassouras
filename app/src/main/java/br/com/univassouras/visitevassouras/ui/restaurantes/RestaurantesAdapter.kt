@@ -39,9 +39,9 @@ class RestaurantesAdapter(
    inner class RestaurantesViewHolder(private val binding: ItemRestaurantesListBinding) : RecyclerView.ViewHolder(binding.root) {
        fun bind(restaurante: RestauranteResponse) {
            binding.tvTituloRestaurantetem.text = restaurante.nome
-           Picasso.get().load(restaurante.logotipo).into(binding.ivLogoRestaurante)
+           Picasso.get().load(restaurante.logo).into(binding.ivLogoRestaurante)
            binding.ivLogoRestaurante.contentDescription = restaurante.nome
-           val url = restaurante.urlSite
+           val url = restaurante.url
 
            binding.mbAcessarSiteRestaurante.setOnClickListener {
                val uri = url?.toUri()

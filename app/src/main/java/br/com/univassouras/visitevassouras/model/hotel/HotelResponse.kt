@@ -6,5 +6,6 @@ data class HotelResponse(
     var id: Int,
     var nome: String?,
     var imagem: String?,
-    var urlSite: String?
+    var url: String?,
+    var ativo: Boolean?
 ) : Serializable

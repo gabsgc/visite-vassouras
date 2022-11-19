@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.net.toUri
+import br.com.univassouras.visitevassouras.R
 import br.com.univassouras.visitevassouras.databinding.ActivityDetalhesAtracaoBinding
 import br.com.univassouras.visitevassouras.model.atracao.AtracaoResponse
 import com.squareup.picasso.Picasso
@@ -32,7 +33,16 @@ class DetalhesAtracaoActivity : AppCompatActivity() {
     }
 
     private fun fillInFields(atracao: AtracaoResponse) {
-        Picasso.get().load(atracao.imagemSecundaria).into(binding.ivImagemAtracao)
+        if (atracao.imgSecundaria.isNullOrEmpty() || atracao.imgSecundaria?.isBlank() == true) {
+            if (atracao.imgPrincipal?.isNullOrEmpty() == false &&
+                atracao.imgPrincipal?.isBlank() == false) {
+                Picasso.get().load(atracao.imgPrincipal).into(binding.ivImagemAtracao)
+            } else {
+                Picasso.get().load(R.drawable.placeholder_atrativos).into(binding.ivImagemAtracao)
+            }
+        } else {
+            Picasso.get().load(atracao.imgSecundaria).into(binding.ivImagemAtracao)
+        }
         binding.tvTituloAtracao.text = atracao.nome
         binding.tvHorarioFuncionamentoAtracao.text = atracao.horarioFuncionamento
         binding.tvEnderecoAtracao.text = atracao.endereco
