@@ -36,7 +36,8 @@ class EventosAdapter(
 
     override fun getItemCount(): Int = eventos.size
 
-    inner class EventosViewHolder(private val binding: ItemEventosListBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class EventosViewHolder(private val binding: ItemEventosListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(evento: EventoResponse) {
             binding.tvTituloEvento.text = evento.titulo
             binding.tvDataInicioEvento.text = evento.dataInicio
@@ -45,18 +46,22 @@ class EventosAdapter(
             binding.tvIngressoEvento.text = evento.valor
             binding.tvLocalEvento.text = evento.local
 
+            if (evento.linkIngresso.isNullOrEmpty() && evento.linkIngresso?.isBlank() == true) {
+                binding.mbComprarIngressoEvento.visibility = View.INVISIBLE
+            } else {
+                val url = evento.linkIngresso
 
-            val url = evento.linkIngresso
+                binding.mbComprarIngressoEvento.setOnClickListener {
+                    val uri = url?.toUri()
+                    val openURL = Intent(Intent.ACTION_VIEW)
+                    openURL.data = Uri.parse(uri.toString())
+                    ContextCompat.startActivity(context, openURL, null)
+                }
 
-            binding.mbComprarIngressoEvento.setOnClickListener {
-                val uri = url?.toUri()
-                val openURL = Intent(Intent.ACTION_VIEW)
-                openURL.data = Uri.parse(uri.toString())
-                ContextCompat.startActivity(context, openURL, null)
-            }
-
-            if (binding.tvIngressoEvento.text == "Gratuito" || binding.tvIngressoEvento.text == "gratuito") {
-                binding.mbComprarIngressoEvento.text = context.getString(R.string.mb_garantir_ingresso)
+                if (binding.tvIngressoEvento.text == "Gratuito" || binding.tvIngressoEvento.text == "gratuito") {
+                    binding.mbComprarIngressoEvento.text =
+                        context.getString(R.string.mb_garantir_ingresso)
+                }
             }
         }
     }

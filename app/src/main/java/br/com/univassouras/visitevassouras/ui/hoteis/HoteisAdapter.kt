@@ -4,10 +4,12 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
+import br.com.univassouras.visitevassouras.R
 import br.com.univassouras.visitevassouras.databinding.ItemHoteisListBinding
 import br.com.univassouras.visitevassouras.model.hotel.HotelResponse
 import com.squareup.picasso.Picasso
@@ -32,19 +34,27 @@ class HoteisAdapter(
 
     override fun getItemCount(): Int = hoteis.size
 
-    inner class HoteisViewHolder(private val binding: ItemHoteisListBinding) : RecyclerView.ViewHolder(binding.root) {
+    inner class HoteisViewHolder(private val binding: ItemHoteisListBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(hotel: HotelResponse) {
             binding.tvTituloHotelItem.text = hotel.nome
-            Picasso.get().load(hotel.imagem).into(binding.ivImagemHotel)
+            if (hotel.imagem.isNullOrEmpty() || hotel.imagem?.isBlank() == true) {
+                Picasso.get().load(R.drawable.placeholder_hoteis).into(binding.ivImagemHotel)
+            } else {
+                Picasso.get().load(hotel.imagem).into(binding.ivImagemHotel)
+            }
             binding.ivImagemHotel.contentDescription = hotel.nome
 
-            val url = hotel.url
-
-            binding.mbAcessarSiteHotel.setOnClickListener {
-                val uri = url?.toUri()
-                val openURL = Intent(Intent.ACTION_VIEW)
-                openURL.data = Uri.parse(uri.toString())
-                ContextCompat.startActivity(context, openURL, null)
+            if (hotel.url.isNullOrEmpty() || hotel.url?.isBlank() == true) {
+                binding.mbAcessarSiteHotel.visibility = View.INVISIBLE
+            } else {
+                val url = hotel.url
+                binding.mbAcessarSiteHotel.setOnClickListener {
+                    val uri = url?.toUri()
+                    val openURL = Intent(Intent.ACTION_VIEW)
+                    openURL.data = Uri.parse(uri.toString())
+                    ContextCompat.startActivity(context, openURL, null)
+                }
             }
         }
     }
