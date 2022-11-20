@@ -36,10 +36,17 @@
     <string name="facebook">\@stedvassouras</string>
     <string name="instagram">\@visitevassouras</string>
     <string name="titulo_scan_qr_code">Scan Qr Code</string>
-    <string name="descricao_scan_qr_code">Encontrou um QrCode?! Clique no botão abaixo e descubra curiosidades sobre a história dessa atração.</string>
+    <string name="descricao_scan_qr_code">Encontrou um QrCode?! Clique no botão abaixo e descubra
+        curiosidades sobre a história dessa atração.</string>
     <string name="ler_qr_code">LER QR CODE</string>
     <string name="aponte_para_o_qrcode">Aponte para o QrCode...</string>
     <string name="sobre">Sobre</string>
+    <string name="sobre_o_app">Este aplicativo faz parte do produto desenvolvido durante o Desafio
+        das Engenharias, evento promovido pela Universidade de Vassouras para a construção de
+        soluções inovadoras.</string>
+    <string name="sobre_o_app1">A equipe do projeto é composta por uma desenvolvedora mobile, dois
+        desenvolvedores backend e um analista de requisitos, sendo todos discentes do curso de
+        Engenharia de Software da Universidade de Vassouras.</string>
     <string name="quero_visitar">QUERO VISITAR</string>
     <string name="saiba_mais">SAIBA MAIS</string>
     <string name="local">Local</string>
@@ -50,10 +57,21 @@
     <string name="mb_garantir_ingresso">GARANTIR INGRESSO</string>
     <string name="cidade_historica">Cidade Histórica</string>
     <string name="cidade_turistica">Turística</string>
-    <string name="sobre_historica">Vassouras, a princesinha do Café, é uma das cidades mais bonitas do interior do estado do Rio de Janeiro. No coração do Vale do Café, o município foi  um grande centro cultural, político e econômico do Brasil oitocentista, e ajudou a sustentar a economia do Segundo Reinado. É um dos berços da história e da diversidade cultural brasileira. Onde você encontra beleza e tranquilidade.</string>
-    <string name="sobre_turistica">Detentora de um rico patrimônio cultural material e imaterial composto por suntuosas fazendas históricas remanescentes dos tempos áureos do café, por um conjunto paisagístico e urbanístico tombado pelo IPHAN formado por um casario de época com belíssimas construções, entre casarões, sobrados e palacetes, pelo Jongo, pela Capoeira, pela Caninha Verde, pelo Calango e pelas Folias de Reis.</string>
+    <string name="sobre_historica">Vassouras, a princesinha do Café, é uma das cidades mais bonitas
+        do interior do estado do Rio de Janeiro. No coração do Vale do Café, o município foi  um
+        grande centro cultural, político e econômico do Brasil oitocentista e ajudou a sustentar a
+        economia do Segundo Reinado. É um dos berços da história e da diversidade cultural brasileira,
+        onde você encontra beleza e tranquilidade.</string>
+    <string name="sobre_turistica">Detentora de um rico patrimônio cultural material e imaterial
+        composto por suntuosas fazendas históricas remanescentes dos tempos áureos do café, por um
+        conjunto paisagístico e urbanístico tombado pelo IPHAN formado por um casario de época com
+        belíssimas construções, entre casarões, sobrados e palacetes, pelo Jongo, pela Capoeira,
+        pela Caninha Verde, pelo Calango e pelas Folias de Reis.</string>
     <string name="cidade_universitaria">Universitária</string>
-    <string name="sobre_universitaria">Há mais de 50 anos, a cidade gira em torno da Universidade de Vassouras. Isso garante uma série de serviços aos estudantes. Todas as instalações da Universidade. A Fundação Educacional Severino Sombra mantenedora da Universidade  forma e e especializa profissionais nas mais diversas áreas do conhecimento, baseada na tríade ensino, pesquisa e extensão.</string>
+    <string name="sobre_universitaria">Há mais de 50 anos, a cidade gira em torno da Universidade de
+        Vassouras. Isso garante uma série de serviços aos estudantes. A Universidade de Vassouras
+        forma e especializa profissionais nas mais diversas áreas do conhecimento, baseada na tríade
+        ensino, pesquisa e extensão.</string>
     <string name="dias_funcionamento">Dias de funcionamento</string>
     <string name="hifen_data">-</string>
     <string name="apoio">Apoio</string>
