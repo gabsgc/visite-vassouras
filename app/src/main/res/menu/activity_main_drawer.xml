@@ -25,13 +25,13 @@
             android:icon="@drawable/ic_menu_calendar"
             android:title="@string/menu_eventos" />
         <item
-            android:id="@+id/nav_sobre_vassouras"
-            android:icon="@drawable/ic_menu_info"
-            android:title="@string/menu_sobre_vassouras" />
-        <item
             android:id="@+id/nav_ler_qrcode"
             android:icon="@drawable/ic_menu_qr_code_scanner"
             android:title="@string/menu_ler_qrcode" />
+        <item
+            android:id="@+id/nav_sobre"
+            android:icon="@drawable/ic_menu_info"
+            android:title="@string/menu_sobre" />
         <item
             android:id="@+id/nav_contato"
             android:icon="@drawable/ic_menu_headset_mic"

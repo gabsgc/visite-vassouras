@@ -12,6 +12,7 @@ import br.com.univassouras.visitevassouras.retrofit.RetrofitInstance
 import br.com.univassouras.visitevassouras.ui.atracoes.AtracoesAdapter
 import br.com.univassouras.visitevassouras.ui.atracoes.CHAVE_ATRACAO
 import br.com.univassouras.visitevassouras.ui.atracoes.DetalhesAtracaoActivity
+import com.squareup.picasso.Picasso
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
@@ -29,6 +30,9 @@ class HomeFragment : Fragment() {
 
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding!!.root
+
+        val banner = "https://docs.google.com/uc?id=1WiPlKb5ehqfuwyONvOw_h1yYQGkjTouE"
+        Picasso.get().load(banner).into(binding?.ivSobreVassouras)
 
         binding?.rvAtracoesHome?.layoutManager = LinearLayoutManager(context)
         binding?.rvEventosHome?.layoutManager = LinearLayoutManager(context)

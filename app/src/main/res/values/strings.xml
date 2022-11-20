@@ -13,7 +13,7 @@
     <string name="menu_restaurantes">Restaurantes</string>
     <string name="menu_hospedagens">Hospedagens</string>
     <string name="menu_eventos">Eventos</string>
-    <string name="menu_sobre_vassouras">Sobre Vassouras</string>
+    <string name="menu_sobre">Sobre o App</string>
     <string name="menu_ler_qrcode">Ler QrCode</string>
     <string name="menu_contato">Entre em Contato</string>
     <string name="visite_vassouras">VISITE VASSOURAS</string>
@@ -56,4 +56,6 @@
     <string name="sobre_universitaria">Há mais de 50 anos, a cidade gira em torno da Universidade de Vassouras. Isso garante uma série de serviços aos estudantes. Todas as instalações da Universidade. A Fundação Educacional Severino Sombra mantenedora da Universidade  forma e e especializa profissionais nas mais diversas áreas do conhecimento, baseada na tríade ensino, pesquisa e extensão.</string>
     <string name="dias_funcionamento">Dias de funcionamento</string>
     <string name="hifen_data">-</string>
+    <string name="apoio">Apoio</string>
+    <string name="realizacao">Realização</string>
 </resources>

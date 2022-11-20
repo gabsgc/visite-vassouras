@@ -46,7 +46,7 @@ class EventosAdapter(
             binding.tvIngressoEvento.text = evento.valor
             binding.tvLocalEvento.text = evento.local
 
-            if (evento.linkIngresso.isNullOrEmpty() && evento.linkIngresso?.isBlank() == true) {
+            if (evento.linkIngresso.isNullOrEmpty() || evento.linkIngresso?.isBlank() == true) {
                 binding.mbComprarIngressoEvento.visibility = View.INVISIBLE
             } else {
                 val url = evento.linkIngresso

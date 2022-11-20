@@ -13,11 +13,11 @@ import com.synnapps.carouselview.ImageListener
 class ConhecaVassourasActivity : AppCompatActivity() {
     private val binding by lazy { ActivityConhecaVassourasBinding.inflate(layoutInflater) }
     var sampleImages = arrayOf(
-        "https://1.bp.blogspot.com/-_SJ9Cx9tAUA/Xac6uk16TOI/AAAAAAAAiZg/awz2GRN71WY_jTy_qGVCfHVDwgkKdJDbQCLcBGAsYHQ/s1600/praca-barao-do-campo-belo-vassouras-rj.jpg",
-        "https://s2.glbimg.com/pAXsV8xzuoPro89DnYsZQxEo94I=/0x0:5184x3456/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2021/8/f/aa8tIaSja4ILN171BdVw/imagem.jpg",
-        "https://www.viajali.com.br/wp-content/uploads/2020/10/vassouras-rj-5.jpg",
-        "https://www.viajali.com.br/wp-content/uploads/2020/10/vassouras-rj-10.jpg",
-        "https://blisshotelvassouras.com.br/imgs/fazenda-do-secretario.jpg"
+        "https://docs.google.com/uc?id=1lgslCx-IeZJo-ZO2gAb4pKiqW_fekL7f",
+        "https://docs.google.com/uc?id=1cykPm9adt2Ggt29IkA-fOSljkZcC-GGM",
+        "https://docs.google.com/uc?id=1cgk--gOlMGYlebDDYY7Oa8m2lupMKAu7",
+        "https://docs.google.com/uc?id=1dAQME_1wYGzjea-EIH_qZlro4Npl1OKK",
+        "https://docs.google.com/uc?id=1d7jLl7GlW1v4NQoLx-vIvYPl8C99J1y7"
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
