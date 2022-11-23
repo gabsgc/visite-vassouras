@@ -4,11 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
-import br.com.univassouras.visitevassouras.R
 import br.com.univassouras.visitevassouras.databinding.ItemEventosListHomeBinding
 import br.com.univassouras.visitevassouras.model.evento.EventoResponse
 
@@ -41,17 +41,17 @@ class HomeEventosAdapter(
             binding.tvIngressoEvento.text = evento.valor
             binding.tvLocalEvento.text = evento.local
 
-            val url = evento.linkIngresso
+            if (evento.linkIngresso.isNullOrEmpty() || evento.linkIngresso?.isBlank() == true) {
+                binding.mbComprarIngressoEvento.visibility = View.INVISIBLE
+            } else if(evento.linkIngresso != null) {
+                val url = evento.linkIngresso
 
-            binding.mbComprarIngressoEvento.setOnClickListener {
-                val uri = url?.toUri()
-                val openURL = Intent(Intent.ACTION_VIEW)
-                openURL.data = Uri.parse(uri.toString())
-                ContextCompat.startActivity(context, openURL, null)
-            }
-
-            if (binding.tvIngressoEvento.text == "Gratuito" || binding.tvIngressoEvento.text == "gratuito") {
-                binding.mbComprarIngressoEvento.text = context.getString(R.string.mb_garantir_ingresso)
+                binding.mbComprarIngressoEvento.setOnClickListener {
+                    val uri = url?.toUri()
+                    val openURL = Intent(Intent.ACTION_VIEW)
+                    openURL.data = Uri.parse(uri.toString())
+                    ContextCompat.startActivity(context, openURL, null)
+                }
             }
         }
     }

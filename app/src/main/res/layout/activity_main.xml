@@ -5,20 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:background="@drawable/vassouras">
-
-    <ImageView
-        android:id="@+id/ivLogoPrefeitura"
-        android:layout_width="wrap_content"
-        android:layout_height="180dp"
-        android:layout_marginTop="32dp"
-        android:contentDescription="@string/logo_prefeitura_de_vassouras"
-        android:src="@drawable/brasao_prefeitura"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+    android:background="@drawable/banner_main">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,37 +7,109 @@
     tools:context=".ui.contato.ContatoFragment">
 
     <TextView
-        android:id="@+id/tvTituloContato"
+        android:id="@+id/tvTituloCAT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="@string/titulo_contato"
-        android:textAlignment="center"
+        android:text="@string/titulo_cat"
         android:textAppearance="?attr/textAppearanceHeadline5"
         android:textColor="@color/black"
-        android:textSize="24sp"
+        android:textSize="20sp"
+        android:singleLine="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvDescricaoContato"
+        android:id="@+id/tvTituloHorarioCAT"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
+        android:text="@string/horario_funcionamento"
+        style="@style/TitulosDetalhes"
+        app:drawableLeftCompat="@drawable/ic_contact_time"
+        app:drawableTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvEnderecoCAT" />
+
+    <TextView
+        android:id="@+id/tvHorarioFuncionamentoCAT"
+        style="@style/descricoes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
-        android:fontFamily="@font/roboto"
+        android:text="@string/horario_cat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloHorarioCAT" />
+
+    <TextView
+        android:id="@+id/tvTituloEnderecoCAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/endereco"
+        style="@style/TitulosDetalhes"
+        app:drawableLeftCompat="@drawable/ic_contact_location"
+        app:drawableTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloCAT" />
+
+    <TextView
+        android:id="@+id/tvEnderecoCAT"
+        style="@style/descricoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/endereco_cat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloEnderecoCAT" />
+
+    <TextView
+        android:id="@+id/tvTituloContatoCAT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:drawablePadding="4dp"
+        android:text="@string/contato_cat"
+        android:textAppearance="?attr/textAppearanceHeadline6"
+        app:drawableLeftCompat="@drawable/ic_baseline_local_phone"
+        app:drawableTint="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHorarioFuncionamentoCAT" />
+
+    <TextView
+        android:id="@+id/tvDescricaoContato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:singleLine="false"
         android:text="@string/descricao_responsavel"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTituloContato" />
+        app:layout_constraintTop_toBottomOf="@id/tvTituloContatoCAT" />
 
     <TextView
         android:id="@+id/tvTituloEndereco"
@@ -59,6 +131,7 @@
         style="@style/descricoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="@string/endereco_sedet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -92,17 +165,6 @@
         app:layout_constraintTop_toBottomOf="@+id/tvTituloHorario" />
 
     <TextView
-        android:id="@+id/tvHorarioFuncionamento2"
-        style="@style/descricoes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/horario_sedet1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHorarioFuncionamento" />
-
-    <TextView
         android:id="@+id/tvTituloInstagram"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -116,7 +178,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvHorarioFuncionamento2" />
+        app:layout_constraintTop_toBottomOf="@+id/tvHorarioFuncionamento" />
 
     <TextView
         android:id="@+id/tvTituloFacebook"
@@ -125,7 +187,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:drawablePadding="4dp"
-        android:text="@string/instagram"
+        android:text="@string/facebook"
         android:textAppearance="?attr/textAppearanceHeadline6"
         app:drawableLeftCompat="@drawable/social_facebook"
         app:drawableTint="@color/black"
@@ -133,4 +195,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloInstagram" />
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

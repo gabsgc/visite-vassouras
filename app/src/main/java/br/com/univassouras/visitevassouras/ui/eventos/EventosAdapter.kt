@@ -6,15 +6,11 @@ import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.net.toUri
 import androidx.recyclerview.widget.RecyclerView
-import br.com.univassouras.visitevassouras.R
 import br.com.univassouras.visitevassouras.databinding.ItemEventosListBinding
 import br.com.univassouras.visitevassouras.model.evento.EventoResponse
-import java.text.SimpleDateFormat
-import java.util.*
 
 class EventosAdapter(
     private val context: Context,
@@ -48,7 +44,7 @@ class EventosAdapter(
 
             if (evento.linkIngresso.isNullOrEmpty() || evento.linkIngresso?.isBlank() == true) {
                 binding.mbComprarIngressoEvento.visibility = View.INVISIBLE
-            } else {
+            } else if(evento.linkIngresso != null) {
                 val url = evento.linkIngresso
 
                 binding.mbComprarIngressoEvento.setOnClickListener {
@@ -56,11 +52,6 @@ class EventosAdapter(
                     val openURL = Intent(Intent.ACTION_VIEW)
                     openURL.data = Uri.parse(uri.toString())
                     ContextCompat.startActivity(context, openURL, null)
-                }
-
-                if (binding.tvIngressoEvento.text == "Gratuito" || binding.tvIngressoEvento.text == "gratuito") {
-                    binding.mbComprarIngressoEvento.text =
-                        context.getString(R.string.mb_garantir_ingresso)
                 }
             }
         }

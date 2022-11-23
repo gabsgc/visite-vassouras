@@ -15,7 +15,7 @@
     <string name="menu_eventos">Eventos</string>
     <string name="menu_sobre">Sobre o App</string>
     <string name="menu_ler_qrcode">Ler QrCode</string>
-    <string name="menu_contato">Entre em Contato</string>
+    <string name="menu_contato">Fale Conosco</string>
     <string name="visite_vassouras">VISITE VASSOURAS</string>
     <string name="comecar">COMEÇAR</string>
 
@@ -26,14 +26,16 @@
     <string name="boas_vindas">Bem-vindo a Vassouras</string>
     <string name="titulo_atracoes_home">Encontre lugares para visitar</string>
     <string name="titulo_eventos_home">Confira a nossa agenda</string>
-    <string name="titulo_contato">Fale com a gente</string>
-    <string name="descricao_responsavel">Secretaria de Desenvolvimento Econômico e Turismo SEDET</string>
+    <string name="descricao_responsavel">Secretaria de Desenvolvimento Econômico e Turismo</string>
     <string name="endereco">Endereço</string>
-    <string name="endereco_sedet">Av. Otávio Gomes, 395, Centro, Vassouras - RJ. CEP 27700-000</string>
+    <string name="endereco_sedet">Av. Otávio Gomes, 395, Centro.</string>
+    <string name="endereco_cat">Rua Barão de Capivari, 20 - Centro.</string>
+    <string name="contato_cat">(24) 2491-9018</string>
     <string name="horario_funcionamento">Horário de funcionamento</string>
-    <string name="horario_sedet">Segunda a Sexta-Feira de 8h às 17h</string>
-    <string name="horario_sedet1">Sábado Fechado</string>
-    <string name="facebook">\@stedvassouras</string>
+    <string name="horario_sedet">Segunda à Sexta das 8h às 17h.</string>
+    <string name="horario_cat">Terças, quartas e quintas, das 12h às 17h.
+        Sextas, sábados, domingos e feriados, das 09h às 16h.</string>
+    <string name="facebook">\@sdetvassouras</string>
     <string name="instagram">\@visitevassouras</string>
     <string name="titulo_scan_qr_code">Scan Qr Code</string>
     <string name="descricao_scan_qr_code">Encontrou um QrCode?! Clique no botão abaixo e descubra
@@ -53,8 +55,6 @@
     <string name="data">Data(s)</string>
     <string name="horario_evento">Horário</string>
     <string name="ingresso">Ingresso</string>
-    <string name="comprar_ingresso">COMPRAR INGRESSO</string>
-    <string name="mb_garantir_ingresso">GARANTIR INGRESSO</string>
     <string name="cidade_historica">Cidade Histórica</string>
     <string name="cidade_turistica">Turística</string>
     <string name="sobre_historica">Vassouras, a princesinha do Café, é uma das cidades mais bonitas
@@ -76,4 +76,5 @@
     <string name="hifen_data">-</string>
     <string name="apoio">Apoio</string>
     <string name="realizacao">Realização</string>
+    <string name="titulo_cat">Centro de Atendimento ao Turista (CAT)</string>
 </resources>
