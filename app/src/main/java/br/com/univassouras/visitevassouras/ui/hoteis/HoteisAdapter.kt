@@ -28,7 +28,8 @@ class HoteisAdapter(
     }
 
     override fun onBindViewHolder(holder: HoteisViewHolder, position: Int) {
-        val item = hoteis[position]
+        val hoteisOrdenados = hoteis.sortedBy { it.nome }
+        val item = hoteisOrdenados[position]
         holder.bind(item)
     }
 

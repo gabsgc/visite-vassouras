@@ -31,7 +31,8 @@ class RestaurantesAdapter(
     }
 
     override fun onBindViewHolder(holder: RestaurantesViewHolder, position: Int) {
-        val item = restaurantes[position]
+        val restaurantesOrdenados = restaurantes.sortedBy { it.nome }
+        val item = restaurantesOrdenados[position]
         holder.bind(item)
     }
 

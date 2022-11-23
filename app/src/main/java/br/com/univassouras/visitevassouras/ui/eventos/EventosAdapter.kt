@@ -26,7 +26,8 @@ class EventosAdapter(
     }
 
     override fun onBindViewHolder(holder: EventosViewHolder, position: Int) {
-        val item = eventos[position]
+        val eventosOrdenados = eventos.sortedByDescending { it.id }
+        val item = eventosOrdenados[position]
         holder.bind(item)
     }
 
